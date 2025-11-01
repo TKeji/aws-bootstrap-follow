@@ -1,0 +1,13 @@
+name: My First Workflow
+on: [push]
+
+jobs: 
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Welcome to message
+              run: echo "My first GH Actions job"
+            - name: List all files
+              run: ls
+            - name: Read file
+              run: cat README.md
