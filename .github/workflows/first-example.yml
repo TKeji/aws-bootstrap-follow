@@ -5,11 +5,12 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: Welcome to message
-              run: echo "My first GH Actions job"
             - name: Checkout Repo
               uses: actions/checkout@v5
-            - name: List all files
-              run: ls
-            - name: Read file
-              run: cat README.md
+            - name: List and Read File
+              run: |
+                echo "My first GH Actions job"
+                ls -ltra
+                cat README.md
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a Dragon!" >> dragon.txt
